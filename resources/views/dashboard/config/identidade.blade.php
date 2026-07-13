@@ -1,0 +1,252 @@
+@extends('layouts.app')
+
+@section('content')
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Identificação e activadades da empresa</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">{{ __('messages.voltar') }}</a></li>
+                        <li class="breadcrumb-item active">Bem-vindo</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <h3 class="card-title">Primeiro Passos</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="bs-stepper">
+
+                                <div class="bs-stepper-header" role="tablist">
+                                    <!-- your steps here -->
+                                    <div class="step" data-target="#informacao-empresa">
+                                        <button type="button" class="step-trigger" role="tab" aria-controls="informacao-empresa" id="informacao-empresa-trigger">
+                                            <span class="bs-stepper-circle">1</span>
+                                            <span class="bs-stepper-label">Informações Empresa</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="line"></div>
+                                    <div class="step" data-target="#tipo-negocio">
+                                        <button type="button" class="step-trigger" role="tab" aria-controls="tipo-negocio" id="tipo-negocio-trigger">
+                                            <span class="bs-stepper-circle">2</span>
+                                            <span class="bs-stepper-label">Tipo Negócio</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="line"></div>
+                                    <div class="step" data-target="#definicao-privacidade">
+                                        <button type="button" class="step-trigger" role="tab" aria-controls="definicao-privacidade" id="definicao-privacidade-trigger">
+                                            <span class="bs-stepper-circle">3</span>
+                                            <span class="bs-stepper-label">Definições de Privacidades</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                                <div class="bs-stepper-content">
+
+                                    <form action="{{ route('identidade-empresa.update', $empresa_logada->empresa->id ) }}" method="post" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('put')
+                                        <!-- your steps content here -->
+                                        <div id="informacao-empresa" class="content" role="tabpanel" aria-labelledby="informacao-empresa-trigger">
+                                            <div class="row">
+                                                <div class="form-group col-12 col-md-6">
+                                                    <label for="nif">Nº Contribuente</label>
+                                                    <input type="text" class="form-control" name="nif" id="nif" value="{{ $LOJAACTIVAOPERADOR->nif }}" placeholder="Número de Contribuente">
+                                                    {{-- <input  type="{{ empty($LOJAACTIVAOPERADOR->nif) ? 'text' : 'text' }}" class="form-control" name="nif" id="nif" value="{{ $LOJAACTIVAOPERADOR->nif }}" {{ empty($LOJAACTIVAOPERADOR->nif) ? '' : 'readonly' }} placeholder="Número de Contribuente"> --}}
+                                                </div>
+
+                                                <div class="form-group col-12 col-md-6">
+                                                    <label for="empresa">Empresa</label>
+                                                    <input type="text" class="form-control" name="empresa" id="empresa" value="{{ $LOJAACTIVAOPERADOR->nome ?? ''  }}" placeholder="Nome da Empresa">
+                                                </div>
+
+                                                <div class="form-group col-12 col-md-6">
+                                                    <label for="nome_dono">Nome Próprio</label>
+                                                    <input type="text" class="form-control" name="nome_dono" id="nome_dono" value="{{ Auth::user()->name ?? ''  }}" placeholder="Nome do Dono">
+                                                </div>
+
+                                                @if ($empresa_logada->empresa->tipo_facturacao != "saft")
+
+                                                <div class="form-group col-12 col-md-6">
+                                                    <label for="establishment_number">Nº do Estabelecimento (Ex: SEDE, LOJA1)</label>
+                                                    <input type="text" class="form-control" name="establishment_number" id="establishment_number" value="{{ $empresa_logada->empresa->establishment_number ?? ''  }}" placeholder="Número de estabelecimento">
+                                                </div>
+
+                                                <div class="form-group col-12 col-md-12">
+                                                    <label for="private_key">Chave Privada</label>
+                                                    <textarea class="form-control" rows="3" placeholder="Informe a sua chave privada aqui" name="private_key" id="private_key">{{ $empresa_logada->empresa->private_key ?? ''  }}</textarea>
+                                                </div>
+
+                                                <div class="form-group col-12 col-md-12">
+                                                    <label for="public_key">Chave Publica</label>
+                                                    <textarea class="form-control" rows="3" placeholder="Informe a sua chave pública aqui" name="public_key" id="public_key">{{ $empresa_logada->empresa->public_key ?? ''  }}</textarea>
+                                                </div>
+                                                @endif
+
+                                            </div>
+
+                                            <a class="btn btn-light-primary" onclick="stepper.next()">Próximo</a>
+                                        </div>
+
+                                        <div id="tipo-negocio" class="content" role="tabpanel" aria-labelledby="tipo-negocio-trigger">
+                                            @if ($empresa_logada->empresa->tipo_empresa != "Fisica")
+                                            <!-- radio -->
+                                            <div class="form-group clearfix">
+                                                @foreach ($tipos_entidade as $item)
+                                                <div class="icheck-primary d-block bg-light p-3">
+                                                    <input type="radio" id="radioPrimary_farmacia{{ $item->id ?? "" }}" name="tipo_negocio" value="{{ $item->id ?? "" }}" {{ $empresa_logada->empresa->tipo_entidade['id'] == $item->id ? 'checked' : ''}}>
+                                                    <label for="radioPrimary_farmacia{{ $item->id ?? "" }}">
+                                                        {{ $item->tipo }}
+                                                    </label>
+                                                </div>
+                                                @endforeach
+                                            </div>
+                                            @endif
+                                            <a class="btn btn-light-primary" onclick="stepper.previous()">Anterior</a>
+                                            <a class="btn btn-light-primary" onclick="stepper.next()">Próximo</a>
+                                        </div>
+
+                                        <div id="definicao-privacidade" class="content" role="tabpanel" aria-labelledby="definicao-privacidade-trigger">
+                                            <div class="row">
+                                                <div class="col-12 col-md-12">
+                                                    <h5>Promoções por e-mail</h5>
+                                                    <p>Ocorrem pontualmente durante o ano.{{ $empresa_logada->empresa->promocoes_email }}</p>
+                                                    <div class="form-group clearfix">
+                                                        <div class="icheck-primary">
+                                                            <input type="radio" id="radioPrimary_promocao_email_sim" value="{{ $empresa_logada->empresa->promocoes_email }}" name="promocao_email" {{ $empresa_logada->empresa->promocoes_email ? 'checked' : ''}}>
+                                                            <label for="radioPrimary_promocao_email_sim">
+                                                                Sim, quero receber promoções por e-mail.
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="icheck-primary">
+                                                            <input type="radio" id="radioPrimary_promocao_email_nao" value="{{ $empresa_logada->empresa->promocoes_email }}" name="promocao_email" {{ $empresa_logada->empresa->promocoes_email ? '' : 'checked'}}>
+                                                            <label for="radioPrimary_promocao_email_nao">
+                                                                Não, Não quero receber.
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-md-12">
+                                                    <h5>Novidades e informações por e-mail</h5>
+                                                    <p>Ocorrem em média 3 vezes por mês.</p>
+                                                    <div class="form-group clearfix">
+                                                        <div class="icheck-primary">
+                                                            <input type="radio" id="radioPrimary_novidades_email_sim" value="{{ $empresa_logada->empresa->novidade_email }}" name="promocao_novidade_email" {{ $empresa_logada->empresa->novidade_email ? 'checked' : ''}}>
+                                                            <label for="radioPrimary_novidades_email_sim">
+                                                                Sim, quero receber novidades e informações por e-mail.
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="icheck-primary">
+                                                            <input type="radio" id="radioPrimary_novidades_email_nao" value="{{ $empresa_logada->empresa->novidade_email }}" name="promocao_novidade_email" {{ $empresa_logada->empresa->novidade_email ? '' : 'checked'}}>
+                                                            <label for="radioPrimary_novidades_email_nao">
+                                                                Não, Não quero receber.
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="btn btn-light-primary" onclick="stepper.previous()">Anterior</a>
+                                            <button type="submit" class="btn btn-light-primary">Terminar</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+@endsection
+
+@section('scripts')
+<script>
+    $(document).ready(function() {
+        $('form').on('submit', function(e) {
+            e.preventDefault(); // Impede o envio tradicional do formulário
+
+            let form = $(this);
+            let formData = form.serialize(); // Serializa os dados do formulário
+
+            $.ajax({
+                url: form.attr('action'), // URL do endpoint no backend
+                method: form.attr('method'), // Método HTTP definido no formulário
+                data: formData, // Dados do formulário
+                headers: {
+                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+                }
+                , beforeSend: function() {
+                    // Você pode adicionar um loader aqui, se necessário
+                    progressBeforeSend();
+                }
+                , success: function(response) {
+                    // Feche o alerta de carregamento
+                    Swal.close();
+                    // Exibe uma mensagem de sucesso
+
+                    // alert(response.mensagem || 'Arquivo exportado com sucesso!');
+                    showMessage('Sucesso!', 'Dados Actualozados com sucesso!', 'success');
+
+                    window.location.reload();
+                }
+                , error: function(xhr) {
+                    // Feche o alerta de carregamento
+                    Swal.close();
+                    // Trata erros e exibe mensagens para o usuário
+                    if (xhr.status === 422) {
+                        let errors = xhr.responseJSON.errors;
+                        let messages = '';
+                        $.each(errors, function(key, value) {
+                            messages += `${value} *`; // Exibe os erros
+                        });
+                        showMessage('Erro de Validação!', messages, 'error');
+                    } else {
+                        showMessage('Erro!', 'Erro ao processar o pedido. Tente novamente.', 'error');
+                    }
+                }
+            , });
+        });
+    });
+    // BS-Stepper Init
+    document.addEventListener('DOMContentLoaded', function() {
+        window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+    })
+
+</script>
+@endsection

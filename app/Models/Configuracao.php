@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class Configuracao extends Model
+{
+
+    use HasApiTokens, HasFactory, Notifiable;
+    use SoftDeletes;
+
+    // Especificando o nome da tabela
+    protected $table = 'tb_configuracoes';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'limite_dias',
+        'valor_cota',
+        'dia_limite_pagamento',
+        'multa_percentual',
+        'juros_diario',
+    ];
+}

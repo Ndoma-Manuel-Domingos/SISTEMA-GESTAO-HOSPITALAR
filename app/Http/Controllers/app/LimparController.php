@@ -131,6 +131,8 @@ class LimparController extends Controller
 
         $dadosExame = [];
 
+        dd($dadosExame);
+
         // Criar exame
         $exame = ExameCatalogo::create([
             'nome' => $dadosExame['nome'],

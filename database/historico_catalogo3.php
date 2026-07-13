@@ -15438,3 +15438,3426 @@ $dadosExame = [
 
     ]
 ];
+
+
+$dadosExame = [
+    'codigo' => 'DEN001',
+    'nome' => 'Dengue',
+    'categoria' => 'Imunologia / Doenças Infecciosas',
+
+    'parametros' => [
+
+        // =====================================
+        // IDENTIFICAÇÃO DO EXAME
+        // =====================================
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Soro;Plasma'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Diagnóstico',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+
+        ],
+
+        // =====================================
+        // RESULTADO DO TESTE
+        // =====================================
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Teste Realizado',
+                    'opcoes' => 'NS1;IgM;IgG;PCR'
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Resultado Dengue',
+                    'opcoes' => 'Negativo;Positivo;Indeterminado'
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Anticorpo Detectado',
+                    'opcoes' => 'Nenhum;IgM;IgG;IgM e IgG'
+                ],
+
+            ]
+
+        ],
+
+        // =====================================
+        // INTERPRETAÇÃO
+        // =====================================
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação da Infecção',
+                    'opcoes' => 'Sem evidência de infecção;Infecção recente;Infecção passada;Resultado inconclusivo'
+                ],
+
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Dengue Detectada',
+                    'texto_sim' => 'Positivo',
+                    'texto_nao' => 'Negativo'
+                ],
+
+            ]
+
+        ],
+
+        // =====================================
+        // OBSERVAÇÕES
+        // =====================================
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'PLA001',
+    'nome' => 'Plaquetas',
+    'categoria' => 'Hematologia / Série Plaquetária',
+
+    'parametros' => [
+
+        // =====================================
+        // IDENTIFICAÇÃO DO EXAME
+        // =====================================
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+
+        ],
+
+        // =====================================
+        // RESULTADO
+        // =====================================
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Contagem de Plaquetas',
+                    'unidade' => 'mil/mm³',
+                    'valor_referencia' => '150 - 450',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 2000
+                ],
+
+            ]
+
+        ],
+
+        // =====================================
+        // INTERPRETAÇÃO
+        // =====================================
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação das Plaquetas',
+                    'opcoes' => 'Trombocitopenia;Normal;Trombocitose'
+                ],
+
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Alteração Plaquetária',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+            ]
+
+        ],
+
+        // =====================================
+        // OBSERVAÇÕES
+        // =====================================
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'MON001',
+    'nome' => 'Monócitos',
+    'categoria' => 'Hematologia / Leucograma',
+
+    'parametros' => [
+
+        // =====================================
+        // IDENTIFICAÇÃO DO EXAME
+        // =====================================
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+
+        ],
+
+        // =====================================
+        // RESULTADO
+        // =====================================
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Monócitos (%)',
+                    'unidade' => '%',
+                    'valor_referencia' => '2 - 10',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 50
+                ],
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Contagem Absoluta de Monócitos',
+                    'unidade' => 'mil/mm³',
+                    'valor_referencia' => '0,2 - 0,8',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 10
+                ],
+
+            ]
+
+        ],
+
+        // =====================================
+        // INTERPRETAÇÃO
+        // =====================================
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação dos Monócitos',
+                    'opcoes' => 'Baixo;Normal;Elevado'
+                ],
+
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Monocitose',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+            ]
+
+        ],
+
+        // =====================================
+        // OBSERVAÇÕES
+        // =====================================
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'LIN001',
+    'nome' => 'Linfócitos',
+    'categoria' => 'Hematologia / Leucograma',
+
+    'parametros' => [
+
+        // =====================================
+        // IDENTIFICAÇÃO DO EXAME
+        // =====================================
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+
+        ],
+
+        // =====================================
+        // RESULTADO
+        // =====================================
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Linfócitos (%)',
+                    'unidade' => '%',
+                    'valor_referencia' => '20 - 40',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 100
+                ],
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Contagem Absoluta de Linfócitos',
+                    'unidade' => 'mil/mm³',
+                    'valor_referencia' => '1,0 - 4,0',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 20
+                ],
+
+            ]
+
+        ],
+
+        // =====================================
+        // INTERPRETAÇÃO
+        // =====================================
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação dos Linfócitos',
+                    'opcoes' => 'Baixo;Normal;Elevado'
+                ],
+
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Linfocitose',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+            ]
+
+        ],
+
+        // =====================================
+        // OBSERVAÇÕES
+        // =====================================
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+
+        ],
+
+    ]
+];
+
+
+
+$dadosExame = [
+    'codigo' => 'BAS001',
+    'nome' => 'Basófilos',
+    'categoria' => 'Hematologia / Leucograma',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Basófilos (%)',
+                    'unidade' => '%',
+                    'valor_referencia' => '0 - 1',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 20
+                ],
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Contagem Absoluta de Basófilos',
+                    'unidade' => 'mil/mm³',
+                    'valor_referencia' => '0 - 0,1',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 5
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação dos Basófilos',
+                    'opcoes' => 'Baixo;Normal;Elevado'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'EOS001',
+    'nome' => 'Eosinófilos',
+    'categoria' => 'Hematologia / Leucograma',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Eosinófilos (%)',
+                    'unidade' => '%',
+                    'valor_referencia' => '1 - 5',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 50
+                ],
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Contagem Absoluta de Eosinófilos',
+                    'unidade' => 'mil/mm³',
+                    'valor_referencia' => '0,05 - 0,5',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 10
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação dos Eosinófilos',
+                    'opcoes' => 'Baixo;Normal;Elevado'
+                ],
+
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Eosinofilia',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+
+$dadosExame = [
+    'codigo' => 'NEU001',
+    'nome' => 'Neutrófilos',
+    'categoria' => 'Hematologia / Leucograma',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Neutrófilos (%)',
+                    'unidade' => '%',
+                    'valor_referencia' => '40 - 70',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 100
+                ],
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Contagem Absoluta de Neutrófilos',
+                    'unidade' => 'mil/mm³',
+                    'valor_referencia' => '1,5 - 7,5',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 50
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação dos Neutrófilos',
+                    'opcoes' => 'Baixo;Normal;Elevado'
+                ],
+
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Neutrofilia',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'LEU001',
+    'nome' => 'Leucócitos',
+    'categoria' => 'Hematologia / Leucograma',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Contagem de Leucócitos',
+                    'unidade' => 'mil/mm³',
+                    'valor_referencia' => '4,0 - 11,0',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 100
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação dos Leucócitos',
+                    'opcoes' => 'Leucopenia;Normal;Leucocitose'
+                ],
+
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Alteração Leucocitária',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'RDW001',
+    'nome' => 'RDW',
+    'categoria' => 'Hematologia / Índices Hematimétricos',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'RDW - Amplitude de Distribuição dos Eritrócitos',
+                    'unidade' => '%',
+                    'valor_referencia' => '11,5 - 14,5',
+                    'valor_minimo' => 5,
+                    'valor_maximo' => 30
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação do RDW',
+                    'opcoes' => 'Baixo;Normal;Elevado'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'MCHC001',
+    'nome' => 'MCHC',
+    'categoria' => 'Hematologia / Índices Hematimétricos',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Concentração de Hemoglobina Corpuscular Média (MCHC)',
+                    'unidade' => 'g/dL',
+                    'valor_referencia' => '32 - 36',
+                    'valor_minimo' => 10,
+                    'valor_maximo' => 50
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação do MCHC',
+                    'opcoes' => 'Baixo;Normal;Elevado'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'MCH001',
+    'nome' => 'MCH',
+    'categoria' => 'Hematologia / Índices Hematimétricos',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Hemoglobina Corpuscular Média (MCH)',
+                    'unidade' => 'pg',
+                    'valor_referencia' => '27 - 33',
+                    'valor_minimo' => 10,
+                    'valor_maximo' => 60
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação do MCH',
+                    'opcoes' => 'Baixo;Normal;Elevado'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'MCV001',
+    'nome' => 'MCV',
+    'categoria' => 'Hematologia / Índices Hematimétricos',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Volume Corpuscular Médio (MCV)',
+                    'unidade' => 'fL',
+                    'valor_referencia' => '80 - 100',
+                    'valor_minimo' => 40,
+                    'valor_maximo' => 150
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação do MCV',
+                    'opcoes' => 'Microcitose;Normocitose;Macrocitose'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'HTC001',
+    'nome' => 'Hematócrito',
+    'categoria' => 'Hematologia / Série Vermelha',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Hematócrito',
+                    'unidade' => '%',
+                    'valor_referencia' => 'Homens: 41 - 53 | Mulheres: 36 - 46',
+                    'valor_minimo' => 10,
+                    'valor_maximo' => 80
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação do Hematócrito',
+                    'opcoes' => 'Baixo;Normal;Elevado'
+                ],
+
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Alteração do Volume Globular',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'ERI001',
+    'nome' => 'Glóbulo Vermelho',
+    'categoria' => 'Hematologia / Série Vermelha',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Contagem de Glóbulos Vermelhos (Eritrócitos)',
+                    'unidade' => 'milhões/mm³',
+                    'valor_referencia' => 'Homens: 4,5 - 5,9 | Mulheres: 4,0 - 5,2',
+                    'valor_minimo' => 1,
+                    'valor_maximo' => 10
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação dos Eritrócitos',
+                    'opcoes' => 'Baixo;Normal;Elevado'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'ALB001',
+    'nome' => 'Albumina',
+    'categoria' => 'Bioquímica / Proteínas Séricas',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Soro;Plasma'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Albumina Sérica',
+                    'unidade' => 'g/dL',
+                    'valor_referencia' => '3,5 - 5,2',
+                    'valor_minimo' => 1,
+                    'valor_maximo' => 8
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação da Albumina',
+                    'opcoes' => 'Baixa;Normal;Elevada'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+    ]
+];
+
+
+
+$dadosExame = [
+    'codigo' => 'HBA001',
+    'nome' => 'Hemoglobina Glicosilada',
+    'categoria' => 'Bioquímica / Metabolismo da Glicose',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Sangue Total com EDTA'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Hemoglobina Glicosilada (HbA1c)',
+                    'unidade' => '%',
+                    'valor_referencia' => '< 5,7',
+                    'valor_minimo' => 3,
+                    'valor_maximo' => 20
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação HbA1c',
+                    'opcoes' => 'Normal (<5,7%);Pré-diabetes (5,7-6,4%);Diabetes (≥6,5%)'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+    ]
+];
+
+
+
+$dadosExame = [
+    'codigo' => 'LIPT001',
+    'nome' => 'Lípidos Totais',
+    'categoria' => 'Bioquímica / Perfil Lipídico',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Soro;Plasma'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Lípidos Totais',
+                    'unidade' => 'mg/dL',
+                    'valor_referencia' => '400 - 800',
+                    'valor_minimo' => 50,
+                    'valor_maximo' => 1500
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação dos Lípidos Totais',
+                    'opcoes' => 'Baixo;Normal;Elevado'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'FOS001',
+    'nome' => 'Fósforo',
+    'categoria' => 'Bioquímica / Metabolismo Mineral',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Soro;Plasma'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Fósforo Sérico',
+                    'unidade' => 'mg/dL',
+                    'valor_referencia' => '2,5 - 4,5',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 15
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação do Fósforo',
+                    'opcoes' => 'Baixo;Normal;Elevado'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'LEV001',
+    'nome' => 'Leveduras',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Presença de Leveduras',
+                    'opcoes' => 'Ausente;Raras;Presentes'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Leveduras Detectadas',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'ERIU001',
+    'nome' => 'Eritrócitos',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Eritrócitos na Urina',
+                    'unidade' => 'por campo',
+                    'valor_referencia' => '0 - 3',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 500
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação dos Eritrócitos',
+                    'opcoes' => 'Ausente;Normal;Hematúria'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+    ]
+];
+
+
+
+$dadosExame = [
+    'codigo' => 'PIO001',
+    'nome' => 'Piócitos',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Piócitos na Urina',
+                    'unidade' => 'por campo',
+                    'valor_referencia' => '0 - 5',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 1000
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação dos Piócitos',
+                    'opcoes' => 'Ausente;Normal;Piúria'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'CILH001',
+    'nome' => 'Cilindros Hialinos',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Presença de Cilindros Hialinos',
+                    'opcoes' => 'Ausente;Raros;Presentes'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Cilindros Hialinos Detectados',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+    ]
+];
+
+
+
+$dadosExame = [
+    'codigo' => 'CILG001',
+    'nome' => 'Cilindros Granulosos',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Presença de Cilindros Granulosos',
+                    'opcoes' => 'Ausente;Raros;Presentes'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Cilindros Granulosos Detectados',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'CILH001',
+    'nome' => 'Cilindros Hemáticos',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Presença de Cilindros Hemáticos',
+                    'opcoes' => 'Ausente;Raros;Presentes'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Cilindros Hemáticos Detectados',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'CILL001',
+    'nome' => 'Cilindros Leucocitários',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Presença de Cilindros Leucocitários',
+                    'opcoes' => 'Ausente;Raros;Presentes'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Cilindros Leucocitários Detectados',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'CRU001',
+    'nome' => 'Cristais de Uratos Amorfos',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Presença de Cristais de Uratos Amorfos',
+                    'opcoes' => 'Ausente;Raros;Moderados;Numerosos'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Cristais de Uratos Amorfos Detectados',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Significado Laboratorial',
+                    'opcoes' => 'Sem alteração significativa;Possível alteração urinária'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+
+$dadosExame = [
+    'codigo' => 'CAU001',
+    'nome' => 'Cristais de Ácido Úrico',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Presença de Cristais de Ácido Úrico',
+                    'opcoes' => 'Ausente;Raros;Moderados;Numerosos'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Cristais de Ácido Úrico Detectados',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+
+    ]
+];
+
+
+
+$dadosExame = [
+    'codigo' => 'HIP001',
+    'nome' => 'Cristais Hipúricos',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Presença de Cristais Hipúricos',
+                    'opcoes' => 'Ausente;Raros;Moderados;Numerosos'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Cristais Hipúricos Detectados',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'OXC001',
+    'nome' => 'Cristais de Oxalato de Cálcio',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Presença de Cristais de Oxalato de Cálcio',
+                    'opcoes' => 'Ausente;Raros;Moderados;Numerosos'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Cristais de Oxalato de Cálcio Detectados',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Risco Associado',
+                    'opcoes' => 'Sem alteração significativa;Possível formação de cálculos urinários'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'FPA001',
+    'nome' => 'Cristais de Fosfatos Amorfos',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Presença de Cristais de Fosfatos Amorfos',
+                    'opcoes' => 'Ausente;Raros;Moderados;Numerosos'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Cristais de Fosfatos Amorfos Detectados',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Significado Laboratorial',
+                    'opcoes' => 'Sem alteração significativa;Associado a urina alcalina'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+
+    ]
+];
+
+
+
+$dadosExame = [
+    'codigo' => 'CCA001',
+    'nome' => 'Cristais de Carbonato de Cálcio',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Presença de Cristais de Carbonato de Cálcio',
+                    'opcoes' => 'Ausente;Raros;Moderados;Numerosos'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Cristais de Carbonato de Cálcio Detectados',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'PH001',
+    'nome' => 'pH',
+    'categoria' => 'Urinálise / Características Físico-Químicas',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'pH Urinário',
+                    'unidade' => 'pH',
+                    'valor_referencia' => '5,0 - 8,0',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 14
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação do pH',
+                    'opcoes' => 'Ácido;Normal;Alcalino'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+
+    ]
+];
+
+$dadosExame = [
+    'codigo' => 'DEN001',
+    'nome' => 'Densidade',
+    'categoria' => 'Urinálise / Características Físico-Químicas',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Densidade Urinária',
+                    'unidade' => 'g/mL',
+                    'valor_referencia' => '1,005 - 1,030',
+                    'valor_minimo' => 1,
+                    'valor_maximo' => 1.1
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Classificação da Densidade',
+                    'opcoes' => 'Baixa;Normal;Elevada'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'NIT001',
+    'nome' => 'Nitritos',
+    'categoria' => 'Urinálise / Características Físico-Químicas',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Pesquisa de Nitritos',
+                    'opcoes' => 'Negativo;Positivo'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Nitritos Detectados',
+                    'texto_sim' => 'Positivo',
+                    'texto_nao' => 'Negativo'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'HEM001',
+    'nome' => 'Hematúrias',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Presença de Hematúria',
+                    'opcoes' => 'Ausente;Microscópica;Macroscópica'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Sangue na Urina Detectado',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'CET001',
+    'nome' => 'Corpos Cetônicos',
+    'categoria' => 'Urinálise / Características Físico-Químicas',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Pesquisa de Corpos Cetônicos',
+                    'opcoes' => 'Negativo;Traços;Positivo (+);Positivo (++);Positivo (+++)'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Corpos Cetônicos Detectados',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'URO001',
+    'nome' => 'Urobilinogênio',
+    'categoria' => 'Urinálise / Características Físico-Químicas',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Pesquisa de Urobilinogênio',
+                    'opcoes' => 'Normal;Aumentado;Ausente'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Valor de Urobilinogênio',
+                    'unidade' => 'mg/dL',
+                    'valor_referencia' => '0,1 - 1,0',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 20
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'PROT001',
+    'nome' => 'Proteinúria',
+    'categoria' => 'Urinálise / Características Físico-Químicas',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Pesquisa de Proteínas na Urina',
+                    'opcoes' => 'Negativo;Traços;+;++;+++;++++'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Quantificação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Proteína Urinária',
+                    'unidade' => 'mg/dL',
+                    'valor_referencia' => '< 15',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'GLU001',
+    'nome' => 'Glicosúria',
+    'categoria' => 'Urinálise / Características Físico-Químicas',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Pesquisa de Glicose na Urina',
+                    'opcoes' => 'Negativo;Traços;+;++;+++;++++'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Quantificação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'numero',
+                    'nome' => 'Glicose Urinária',
+                    'unidade' => 'mg/dL',
+                    'valor_referencia' => 'Ausente',
+                    'valor_minimo' => 0,
+                    'valor_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Glicosúria Detectada',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 5,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];
+
+
+$dadosExame = [
+    'codigo' => 'FUN001',
+    'nome' => 'Fungos',
+    'categoria' => 'Urinálise / Sedimento Urinário',
+
+    'parametros' => [
+
+        [
+            'nome' => 'Identificação do Exame',
+            'ordem' => 1,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'data',
+                    'nome' => 'Data da Coleta',
+                    'permitir_futuro' => false,
+                    'permitir_passado' => true
+                ],
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Tipo de Amostra',
+                    'opcoes' => 'Urina'
+                ],
+
+                [
+                    'tipo' => 'texto',
+                    'nome' => 'Método Utilizado',
+                    'tamanho_maximo' => 100
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Resultado',
+            'ordem' => 2,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'lista',
+                    'nome' => 'Presença de Fungos',
+                    'opcoes' => 'Ausente;Raros;Moderados;Numerosos'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Interpretação',
+            'ordem' => 3,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'booleano',
+                    'nome' => 'Fungos Detectados',
+                    'texto_sim' => 'Presente',
+                    'texto_nao' => 'Ausente'
+                ],
+
+            ]
+        ],
+
+        [
+            'nome' => 'Observações',
+            'ordem' => 4,
+
+            'subparametros' => [
+
+                [
+                    'tipo' => 'textarea',
+                    'nome' => 'Observações',
+                    'tamanho_maximo' => 1000
+                ],
+
+            ]
+        ],
+
+    ]
+];

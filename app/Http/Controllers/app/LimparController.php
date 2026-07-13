@@ -16,6 +16,7 @@ use App\Models\ContaHospitalar;
 use App\Models\ContaHospitalarItem;
 use App\Models\ContaHospitalarMovimento;
 use App\Models\ContaHospitalarPagamento;
+use App\Models\DisponibilidadeMedica;
 use App\Models\Estoque;
 use App\Models\Exame;
 use App\Models\ExameItem;
@@ -72,6 +73,7 @@ class LimparController extends Controller
     {
         $entidade = User::with(['empresa'])->findOrFail(Auth::user()->id);
 
+        DisponibilidadeMedica::withTrashed()->where('entidade_id', $entidade->empresa->id)->forceDelete();
         ContaHospitalar::withTrashed()->where('entidade_id', $entidade->empresa->id)->forceDelete();
         ContaHospitalarItem::withTrashed()->where('entidade_id', $entidade->empresa->id)->forceDelete();
         ContaHospitalarMovimento::withTrashed()->where('entidade_id', $entidade->empresa->id)->forceDelete();
@@ -87,7 +89,6 @@ class LimparController extends Controller
         SeguradoraPlanoCobertura::withTrashed()->where('entidade_id', $entidade->empresa->id)->forceDelete();
         SeguradoraPlanoBeneficiador::withTrashed()->where('entidade_id', $entidade->empresa->id)->forceDelete();
         ParamentroConsulta::withTrashed()->where('entidade_id', $entidade->empresa->id)->forceDelete();
-
 
         SubParamentroExame::withTrashed()->where('entidade_id', $entidade->empresa->id)->forceDelete();
         ResultadoExameParamentro::withTrashed()->where('entidade_id', $entidade->empresa->id)->forceDelete();
